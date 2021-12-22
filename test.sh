@@ -7,5 +7,6 @@ PATH=/home/pi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin
 export PATH
 read ip
 read ovpn_path
-sudo scp sirius2beta@${ip}:${ovpn_path} .
-sudo mv [name].ovpn client.conf
+read ovpn_file
+sudo scp sirius2beta@${ip}:${ovpn_path}/{ovpn_file} .
+sudo mv ${ovpn_file}.ovpn client.conf
