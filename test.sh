@@ -8,5 +8,6 @@ export PATH
 read ip
 read ovpn_path
 read ovpn_file
-sudo scp sirius2beta@${ip}:${ovpn_path}/{ovpn_file} .
+read password
+yes ${password} |sudo scp sirius2beta@${ip}:${ovpn_path}/${ovpn_file} .
 sudo mv ${ovpn_file}.ovpn client.conf
