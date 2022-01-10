@@ -12,5 +12,5 @@ cd /home/pi/UHV
 dmesg
 ifconfig -a
 sudo -s ifconfig wwan0 up
-./connect.sh
+sudo minicom -S connect.txt -D /dev/ttyUSB2
 sudo -s udhcpc -i wwan0

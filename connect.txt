@@ -1,9 +1,29 @@
 send AT+CPIN?
-expect "OK"
-sleep 5
+expect {
+	"+CPIN: SIM PIN" goto unlock
+	"+CPIN: READY" goto qcrmcall
+	timeout 5 goto penic
+}
 
+unlock:
+send AT+CPIN=0000
+expect {
+	"PB DONE"
+	timeout 5 goto penic
+}
+
+qcrmcall:
 send AT$QCRMCALL=1,1
-expect "ERROR"
+expect {
+	"ERROR" goto qcrmcall
+	"NO CARRIER" goto qcrmcall
+	"OK" goto continue
+	timeout 5 goto panic
+}
+
+continue:
 ! killall -9 minicom
-expect "OK"
-exit
+
+
+panic:
+! killall -9 minicom
