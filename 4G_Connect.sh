@@ -1,8 +1,8 @@
 #!/bin/bash
 #Program:
-# This program will auto install mavproxy
+# This program will start 4G connection with SIM7600CE 4G HAT through NDIS
 # History:
-# 2021/12/22  Sirius  First release
+# 2022/1/10  Sirius  First release
 PATH=/home/pi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/home/pi/.local/bin
 export PATH
 sudo -s rmmod qmi_wwan
