@@ -1,6 +1,9 @@
-send AT+CPIN=0000
-expect "PB DONE"
+send AT+CPIN?
+expect "OK"
+sleep 5
 
 send AT$QCRMCALL=1,1
-
+expect "ERROR"
+! killall -9 minicom
+expect "OK"
 exit
