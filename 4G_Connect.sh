@@ -13,3 +13,4 @@ dmesg
 ifconfig -a
 sudo -s ifconfig wwan0 up
 ./connect.sh
+sudo -s udhcpc -i wwan0

@@ -1,0 +1,6 @@
+send AT+CPIN=0000
+expect "PB DONE"
+
+send AT$QCRMCALL=1,1
+
+exit
