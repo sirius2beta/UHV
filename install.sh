@@ -14,13 +14,22 @@ source ~/.bashrc
 echo "start downloading openvpn..."
 yes Y |sudo apt-get install openvpn
 echo "start installing gstreamer"
-sudo apt-get install libx264-dev libjpeg-dev
-apt-get install libgstreamer1.0-dev \
+yes Y |sudo apt-get install libx264-dev libjpeg-dev
+yes Y |sudo apt-get install libgstreamer1.0-dev \
 		     libgstreamer-plugins-base1.0-dev \
 		     libgstreamer-plugins-bad1.0-dev \
 		     gstreamer1.0-plugins-ugly \
      gstreamer1.0-tools
-sudo apt-get install gstreamer1.0-gl gstreamer1.0-gtk3
+yes Y |sudo apt-get install gstreamer1.0-gl gstreamer1.0-gtk3
 echo "finished installation process"
-
+echo "start installing minicom"
+yes Y |sudo apt-get install minicom
+wget https://www.waveshare.net/w/upload/0/00/SIM7600_NDIS.7zsudo
+yes Y |sudo apt-get install p7zip-full
+7z x SIM7600_NDIS.7z   -r -o./SIM7600_NDIS
+cd SIM7600_NDIS
+yes Y |sudo apt install raspberrypi-kernel-headers
+make clean 
+make
+yes Y |apt-get install udhcpc
 
