@@ -3,7 +3,7 @@ I'm working on a project to make Unmanned Vehicle. This folder is installed on a
 # Getting started
 After starting up the raspberry pi, install this repository
 ```
-git clone https://github.com/sirius2beta/UHV.git
+git clone https://github.com/sirius2beta/USVPI.git
 ```
 than, run the installation command
 ```
