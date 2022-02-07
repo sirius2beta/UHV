@@ -1,5 +1,5 @@
-# intro
-I'm working on a project to make Unmanned Vehicle. This folder is installed on a raspberry pi. Including installation of mavproxy, openvpn, gstreamer, 4G module drivers... 
+# Introduction
+I'm working on a project to make Unmanned Surface Vehicle(USV). This folder is installed on a raspberry pi. Including installation of mavproxy, openvpn, gstreamer, 4G module drivers... 
 # Getting started
 After starting up the raspberry pi, install this repository
 ```
