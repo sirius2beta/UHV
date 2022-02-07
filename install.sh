@@ -31,6 +31,6 @@ cd SIM7600_NDIS
 yes Y |sudo apt install raspberrypi-kernel-headers
 sudo -s make clean 
 sudo -s make
-yes Y |apt-get install udhcpc
+yes Y |sudo apt-get install udhcpc
 echo "finished installation process"
 
