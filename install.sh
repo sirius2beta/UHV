@@ -24,7 +24,7 @@ yes Y |sudo apt-get install gstreamer1.0-gl gstreamer1.0-gtk3
 echo "start installing minicom"
 yes Y |sudo apt-get install minicom
 echo "start setting up 4G module"
-wget https://www.waveshare.net/w/upload/0/00/SIM7600_NDIS.7zsudo
+wget https://www.waveshare.net/w/upload/0/00/SIM7600_NDIS.7z
 yes Y |sudo apt-get install p7zip-full
 7z x SIM7600_NDIS.7z   -r -o./SIM7600_NDIS
 cd SIM7600_NDIS
