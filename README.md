@@ -7,5 +7,5 @@ git clone https://github.com/sirius2beta/USVPI.git
 ```
 than, run the installation command
 ```
-bash UHV/install.sh
+bash USVPI/install.sh
 ```
