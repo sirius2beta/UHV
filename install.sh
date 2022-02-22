@@ -32,5 +32,6 @@ yes Y |sudo apt install raspberrypi-kernel-headers
 sudo -s make clean 
 sudo -s make
 yes Y |sudo apt-get install udhcpc
+sudo chmod +x 4G_Connect.sh
 echo "finished installation process"
 
