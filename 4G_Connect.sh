@@ -8,7 +8,7 @@ export PATH
 sudo -s rmmod qmi_wwan
 sudo -s cd /home/pi/SIM7600_NDIS
 sudo -s insmod /home/pi/SIM7600_NDIS/simcom_wwan.ko
-cd /home/pi/UHV
+cd /home/pi/USVPI
 dmesg
 ifconfig -a
 sudo -s ifconfig wwan0 up
