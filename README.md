@@ -19,5 +19,5 @@ sudo nano /etc/rc.local
 ```
 Add the following command before "Exit 0"
 ```
-/home/pi/4G_Connect.sh &
+/home/pi/USVPI/4G_Connect.sh &
 ```
