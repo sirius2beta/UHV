@@ -36,7 +36,7 @@ yes Y |sudo apt-get install p7zip-full
 7z x SIM7600_NDIS.7z   -r -o./SIM7600_NDIS
 cd SIM7600_NDIS
 yes Y |sudo apt install raspberrypi-kernel-headers
-yes Y |sudo apt-get install --reinstall raspberrypi-boot-loader raspberrypi-kernel
+yes Y |sudo apt-get install --reinstall raspberrypi-bootloader raspberrypi-kernel
 sudo -s make clean 
 sudo -s make
 yes Y |sudo apt-get install udhcpc
