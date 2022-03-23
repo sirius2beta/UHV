@@ -9,11 +9,7 @@ than, run the installation command
 ```
 bash USVPI/install.sh
 ```
-Make 4G_Connect.sh execuatable
-```
-sudo chmod +x 4G_Connect.sh
-```
-edit the /etc/rc.local file
+Edit the /etc/rc.local file
 ```
 sudo nano /etc/rc.local
 ```
