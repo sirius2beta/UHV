@@ -20,7 +20,7 @@ Add the following command before "Exit 0"
 ```
 Join zerotier network
 ```
-sudo zerotier-cli join [NETWORKID]
+sudo zerotier-cli join e5cd7a9e1c74ff6e
 ```
 If your Raspberry Pi successfully joins the ZeroTier network, you should see the following message.
 ```
