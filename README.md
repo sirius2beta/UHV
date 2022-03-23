@@ -7,7 +7,8 @@ git clone https://github.com/sirius2beta/USVPI.git
 ```
 than, run the installation command
 ```
-bash USVPI/install.sh
+cd USVPI
+bash install.sh
 ```
 Edit the /etc/rc.local file
 ```
