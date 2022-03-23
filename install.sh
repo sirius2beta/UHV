@@ -13,6 +13,9 @@ echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
 source ~/.bashrc
 echo "start downloading openvpn..."
 yes Y |sudo apt-get install openvpn
+
+yes Y |sudo apt install -y mosquitto mosquitto-clients
+yes Y |sudo apt-get install libmosquitto-dev libmosquittopp-dev libssl-dev
 echo "start installing gstreamer"
 yes Y |sudo apt-get install libx264-dev libjpeg-dev
 yes Y |sudo apt-get install libgstreamer1.0-dev \
