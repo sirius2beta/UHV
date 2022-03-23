@@ -9,7 +9,7 @@ unlock:
 send AT+CPIN=2732
 expect {
 	"PB DONE"
-	timeout 5 goto penic
+	timeout 5 goto panic
 }
 
 qcrmcall:
