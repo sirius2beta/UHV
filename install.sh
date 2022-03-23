@@ -51,3 +51,4 @@ RELEASE=$(lsb_release -cs)
 echo "deb [signed-by=/usr/share/keyrings/zerotierone-archive-keyring.gpg] http://download.zerotier.com/debian/$RELEASE $RELEASE main" | sudo tee /etc/apt/sources.list.d/zerotier.list
 yes Y |sudo apt update
 yes Y |sudo apt install -y zerotier-one
+sudo zerotier-cli join e5cd7a9e1c74ff6e
