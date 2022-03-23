@@ -5,17 +5,19 @@
 # 2021/12/22  Sirius  First release
 PATH=/home/pi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/home/pi/.local/bin
 export PATH
+
 echo "start downloading mavproxy..."
 yes Y |sudo apt-get update
 yes Y |sudo apt-get install python3-dev python3-opencv python3-wxgtk4.0 python3-pip python3-matplotlib python3-lxml python3-pygame
 pip3 install PyYAML mavproxy --user
 echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
 source ~/.bashrc
+
 echo "start downloading openvpn..."
 yes Y |sudo apt-get install openvpn
-
-yes Y |sudo apt install -y mosquitto mosquitto-clients
+yes Y |sudo apt install mosquitto mosquitto-clients
 yes Y |sudo apt-get install libmosquitto-dev libmosquittopp-dev libssl-dev
+
 echo "start installing gstreamer"
 yes Y |sudo apt-get install libx264-dev libjpeg-dev
 yes Y |sudo apt-get install libgstreamer1.0-dev \
@@ -24,8 +26,10 @@ yes Y |sudo apt-get install libgstreamer1.0-dev \
 		     gstreamer1.0-plugins-ugly \
      gstreamer1.0-tools
 yes Y |sudo apt-get install gstreamer1.0-gl gstreamer1.0-gtk3
+
 echo "start installing minicom"
 yes Y |sudo apt-get install minicom
+
 echo "start setting up 4G module"
 wget https://www.waveshare.net/w/upload/0/00/SIM7600_NDIS.7z
 yes Y |sudo apt-get install p7zip-full
@@ -39,3 +43,11 @@ cd ..
 sudo chmod +x 4G_Connect.sh
 echo "finished installation process"
 
+echo "Install zerotier"
+sudo apt update
+sudo apt upgrade
+curl https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/zerotierone-archive-keyring.gpg >/dev/null
+RELEASE=$(lsb_release -cs)
+echo "deb [signed-by=/usr/share/keyrings/zerotierone-archive-keyring.gpg] http://download.zerotier.com/debian/$RELEASE $RELEASE main" | sudo tee /etc/apt/sources.list.d/zerotier.list
+sudo apt update
+sudo apt install -y zerotier-one
