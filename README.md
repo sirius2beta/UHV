@@ -10,13 +10,18 @@ than, run the installation command
 cd USVPI
 bash install.sh
 ```
+Reboot and execute
+```
+cd USVPI/SIM7600_NDIS
+make
+```
 Edit the /etc/rc.local file
 ```
 sudo nano /etc/rc.local
 ```
 Add the following command before "Exit 0"
 ```
-/home/pi/USVPI/4G_Connect.sh&
+/home/pi/USVPI/4G_Connect.sh &
 ```
 Join zerotier network
 ```
