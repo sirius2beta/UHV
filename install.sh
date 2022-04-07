@@ -27,6 +27,9 @@ yes Y |sudo apt-get install libgstreamer1.0-dev \
      gstreamer1.0-tools
 yes Y |sudo apt-get install gstreamer1.0-gl gstreamer1.0-gtk3
 
+echo "start installing paho-mqtt"
+pip install paho-mqtt
+
 echo "start installing minicom"
 yes Y |sudo apt-get install minicom
 
