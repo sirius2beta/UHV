@@ -29,6 +29,7 @@ yes Y |sudo apt-get install gstreamer1.0-gl gstreamer1.0-gtk3
 
 echo "start installing paho-mqtt"
 pip install paho-mqtt
+sudo pip instal paho-mqtt
 
 echo "start installing minicom"
 yes Y |sudo apt-get install minicom
@@ -55,3 +56,7 @@ echo "deb [signed-by=/usr/share/keyrings/zerotierone-archive-keyring.gpg] http:/
 yes Y |sudo apt update
 yes Y |sudo apt install -y zerotier-one
 sudo zerotier-cli join e5cd7a9e1c74ff6e
+
+echo "start dowloading gstreamer_singlecamera"
+cd
+git clone https://github.com/sirius2beta/GStreamer_singlecamera.git
