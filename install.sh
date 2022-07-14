@@ -59,4 +59,6 @@ sudo zerotier-cli join e5cd7a9e1c74ff6e
 
 echo "start dowloading gstreamer_singlecamera"
 cd
+git clone https://github.com/sirius2beta/USVPI.git
+git clone https://github.com/sirius2beta/sensor.git
 git clone https://github.com/sirius2beta/GStreamer_singlecamera.git
