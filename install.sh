@@ -28,7 +28,7 @@ yes Y |sudo apt-get install libgstreamer1.0-dev \
 yes Y |sudo apt-get install gstreamer1.0-gl gstreamer1.0-gtk3
 
 echo "start installing paho-mqtt"
-pip install paho-mqtt
+yes Y | pip install paho-mqtt
 yes Y | sudo pip install paho-mqtt
 
 echo "start installing minicom"
