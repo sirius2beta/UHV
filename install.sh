@@ -65,7 +65,7 @@ curl -L https://pkgs.tailscale.com/stable/raspbian/$(lsb_release -cs).noarmor.gp
 echo "deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://pkgs.tailscale.com/stable/raspbian $(lsb_release -cs) main" | sudo tee  /etc/apt/sources.list.d/tailscale.list
 yes Y | sudo apt update
 yes Y | sudo apt install tailscale
-sudo tailscale up --authkey tskey-auth-krhnih5CNTRL-CNy9Qo1MpX5NJqhHESTUd5TxPbfriEVj
+sudo tailscale up --authkey tskey-auth-ktLTir5CNTRL-8eekfCdkg54xDb1CEpKY94Vjn8jZyN8n
 
 yes Y | sudo apt-get update
 yes Y | sudo apt-get install realvnc-vnc-server
