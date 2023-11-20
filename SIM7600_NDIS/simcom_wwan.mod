@@ -1,0 +1,2 @@
+/home/pi/USVPI/SIM7600_NDIS/simcom_wwan.o
+

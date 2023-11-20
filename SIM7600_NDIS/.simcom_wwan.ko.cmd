@@ -1,0 +1,1 @@
+cmd_/home/pi/USVPI/SIM7600_NDIS/simcom_wwan.ko := ld -r  -EL  --build-id=sha1  -T scripts/module.lds -o /home/pi/USVPI/SIM7600_NDIS/simcom_wwan.ko /home/pi/USVPI/SIM7600_NDIS/simcom_wwan.o /home/pi/USVPI/SIM7600_NDIS/simcom_wwan.mod.o;  true

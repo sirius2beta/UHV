@@ -76,3 +76,5 @@ cd
 git clone https://github.com/sirius2beta/USVPI.git
 git clone https://github.com/sirius2beta/sensor.git
 git clone https://github.com/sirius2beta/GStreamer_singlecamera.git
+
+sudo cp rc.local /etc
