@@ -67,6 +67,10 @@ yes Y | sudo apt update
 yes Y | sudo apt install tailscale
 sudo tailscale up --authkey tskey-auth-krhnih5CNTRL-CNy9Qo1MpX5NJqhHESTUd5TxPbfriEVj
 
+yes Y | sudo apt-get update
+yes Y | sudo apt-get install realvnc-vnc-server
+yes Y | sudp apt-get install realvnc-vnc-viewer
+
 echo "start dowloading gstreamer_singlecamera"
 cd
 git clone https://github.com/sirius2beta/USVPI.git
