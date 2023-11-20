@@ -34,19 +34,19 @@ yes Y | sudo pip install paho-mqtt
 echo "start installing minicom"
 yes Y |sudo apt-get install minicom
 
-#echo "start setting up 4G module"
-#wget https://www.waveshare.net/w/upload/0/00/SIM7600_NDIS.7z
-#yes Y |sudo apt-get install p7zip-full
-#7z x SIM7600_NDIS.7z   -r -o./SIM7600_NDIS
-#cd SIM7600_NDIS
-#yes Y |sudo apt install raspberrypi-kernel-headers
-#yes Y |sudo apt-get install --reinstall raspberrypi-bootloader raspberrypi-kernel
-#sudo -s make clean 
-#sudo -s make
-#yes Y |sudo apt-get install udhcpc
-#cd ..
-#sudo chmod +x 4G_Connect.sh
-#echo "finished installation process"
+echo "start setting up 4G module"
+wget https://www.waveshare.net/w/upload/0/00/SIM7600_NDIS.7z
+yes Y |sudo apt-get install p7zip-full
+7z x SIM7600_NDIS.7z   -r -o./SIM7600_NDIS
+cd SIM7600_NDIS
+yes Y |sudo apt install raspberrypi-kernel-headers
+yes Y |sudo apt-get install --reinstall raspberrypi-bootloader raspberrypi-kernel
+sudo -s make clean 
+sudo -s make
+yes Y |sudo apt-get install udhcpc
+cd ..
+sudo chmod +x 4G_Connect.sh
+echo "finished installation process"
 
 #echo "Install zerotier"
 #yes Y |sudo apt upgrade
