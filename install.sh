@@ -13,10 +13,10 @@ pip3 install PyYAML mavproxy --user
 echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
 source ~/.bashrc
 
-echo "start downloading openvpn..."
-yes Y |sudo apt-get install openvpn
-yes Y |sudo apt install mosquitto mosquitto-clients
-yes Y |sudo apt-get install libmosquitto-dev libmosquittopp-dev libssl-dev
+#echo "start downloading openvpn..."
+#yes Y |sudo apt-get install openvpn
+#yes Y |sudo apt install mosquitto mosquitto-clients
+#yes Y |sudo apt-get install libmosquitto-dev libmosquittopp-dev libssl-dev
 
 echo "start installing gstreamer"
 yes Y |sudo apt-get install libx264-dev libjpeg-dev
@@ -34,28 +34,38 @@ yes Y | sudo pip install paho-mqtt
 echo "start installing minicom"
 yes Y |sudo apt-get install minicom
 
-echo "start setting up 4G module"
-wget https://www.waveshare.net/w/upload/0/00/SIM7600_NDIS.7z
-yes Y |sudo apt-get install p7zip-full
-7z x SIM7600_NDIS.7z   -r -o./SIM7600_NDIS
-cd SIM7600_NDIS
-yes Y |sudo apt install raspberrypi-kernel-headers
-yes Y |sudo apt-get install --reinstall raspberrypi-bootloader raspberrypi-kernel
-sudo -s make clean 
-sudo -s make
-yes Y |sudo apt-get install udhcpc
-cd ..
-sudo chmod +x 4G_Connect.sh
-echo "finished installation process"
+#echo "start setting up 4G module"
+#wget https://www.waveshare.net/w/upload/0/00/SIM7600_NDIS.7z
+#yes Y |sudo apt-get install p7zip-full
+#7z x SIM7600_NDIS.7z   -r -o./SIM7600_NDIS
+#cd SIM7600_NDIS
+#yes Y |sudo apt install raspberrypi-kernel-headers
+#yes Y |sudo apt-get install --reinstall raspberrypi-bootloader raspberrypi-kernel
+#sudo -s make clean 
+#sudo -s make
+#yes Y |sudo apt-get install udhcpc
+#cd ..
+#sudo chmod +x 4G_Connect.sh
+#echo "finished installation process"
 
-echo "Install zerotier"
-yes Y |sudo apt upgrade
-curl https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/zerotierone-archive-keyring.gpg >/dev/null
-RELEASE=$(lsb_release -cs)
-echo "deb [signed-by=/usr/share/keyrings/zerotierone-archive-keyring.gpg] http://download.zerotier.com/debian/$RELEASE $RELEASE main" | sudo tee /etc/apt/sources.list.d/zerotier.list
-yes Y |sudo apt update
-yes Y |sudo apt install -y zerotier-one
-sudo zerotier-cli join e5cd7a9e1c74ff6e
+#echo "Install zerotier"
+#yes Y |sudo apt upgrade
+#curl https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/zerotierone-archive-keyring.gpg >/dev/null
+#RELEASE=$(lsb_release -cs)
+#echo "deb [signed-by=/usr/share/keyrings/zerotierone-archive-keyring.gpg] http://download.zerotier.com/debian/$RELEASE $RELEASE main" | sudo tee /etc/apt/sources.list.d/zerotier.list
+#yes Y |sudo apt update
+#yes Y |sudo apt install -y zerotier-one
+#sudo zerotier-cli join e5cd7a9e1c74ff6e
+
+echo "Install Tailscale"
+yes Y | sudo apt update
+yes Y | sudo apt upgrade
+yes Y | sudo apt install lsb-release curl
+curl -L https://pkgs.tailscale.com/stable/raspbian/$(lsb_release -cs).noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
+echo "deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://pkgs.tailscale.com/stable/raspbian $(lsb_release -cs) main" | sudo tee  /etc/apt/sources.list.d/tailscale.list
+yes Y | sudo apt update
+yes Y | sudo apt install tailscale
+sudo tailscale up --authkey tskey-auth-krhnih5CNTRL-CNy9Qo1MpX5NJqhHESTUd5TxPbfriEVj
 
 echo "start dowloading gstreamer_singlecamera"
 cd
