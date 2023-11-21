@@ -82,3 +82,4 @@ bash GPlayer3/install.sh
 sudo cp rc.local /etc
 sudo raspi-config nonint do_vnc 0
 sudo raspi-config nonint do_vnc_resolution 1920x1080
+sudo raspi-config nonint do_camera 0
