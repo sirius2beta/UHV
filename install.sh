@@ -37,7 +37,7 @@ yes Y |sudo apt-get install minicom
 echo "start setting up 4G module"
 wget https://www.waveshare.net/w/upload/0/00/SIM7600_NDIS.7z
 yes Y |sudo apt-get install p7zip-full
-7z x SIM7600_NDIS.7z   -r -o./SIM7600_NDIS
+#7z x SIM7600_NDIS.7z   -r -o./SIM7600_NDIS
 cd SIM7600_NDIS
 yes Y |sudo apt install raspberrypi-kernel-headers
 yes Y |sudo apt-get install --reinstall raspberrypi-bootloader raspberrypi-kernel
