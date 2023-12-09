@@ -10,34 +10,4 @@ than, run the installation command
 cd USVPI
 bash install.sh
 ```
-Reboot and execute
-```
-cd USVPI/SIM7600_NDIS
-make
-```
-Edit the /etc/rc.local file
-```
-sudo nano /etc/rc.local
-```
-Add the following command before "Exit 0"
-```
-/home/pi/USVPI/4G_Connect.sh &
-```
-Join zerotier network
-```
-sudo zerotier-cli join e5cd7a9e1c74ff6e
-```
-If your Raspberry Pi successfully joins the ZeroTier network, you should see the following message.
-```
-200 join OK
-```
-Once you are on the management page for your Raspberry Pi’s ZeroTier network, you will need to scroll down to see the “Members” section.
-
-This command will list all networks that your ZeroTier installation is connected to and the status of that connection.
-```
-sudo zerotier-cli listnetworks
-```
-Below is an example of what you should see when your Raspberry Pi has successfully connected to your ZeroTier network. The last value is the IP address that was assigned to your Pi as a member of the virtual network.
-```
-200 listnetworks [Network ID] [Network NAME] [Network Address] OK PRIVATE [Virtual Name] [Virtual IP]
-```
+Reboot
