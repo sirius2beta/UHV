@@ -78,6 +78,7 @@ git clone https://github.com/sirius2beta/sensor.git
 git clone https://github.com/sirius2beta/GStreamer_singlecamera.git
 git clone https://github.com/sirius2beta/GPlayer3.git
 cd GPlayer3
+sudo chmod +x install.sh
 bash install.sh
 
 cd ~/USVPI
