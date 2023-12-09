@@ -12,3 +12,5 @@ This is a program running on an onboard computer of unmanned surface vehicle(USV
   bash install.sh
   ```
 * Reboot
+# About US
+NPU Rockfish project
