@@ -5,6 +5,8 @@
 # 2021/12/22  Sirius  First release
 PATH=/home/pi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/home/pi/.local/bin
 export PATH
+echo "basic settings"
+sudo timedatectl set-timezone Asia/Taipei
 
 echo "start downloading mavproxy..."
 yes Y |sudo apt-get update
